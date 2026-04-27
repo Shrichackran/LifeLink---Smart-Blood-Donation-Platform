@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LifeLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🩸 LifeLink</h1>
+
+<form id="form">
+  <input type="text" id="bloodGroup" placeholder="Blood Group (O+, A+)" required>
+  <input type="text" id="location" placeholder="Location" required>
+  <button type="submit">Find Donors</button>
+</form>
+
+<ul id="results"></ul>
+
+<script>
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const bloodGroup = document.getElementById("bloodGroup").value;
+  const location = document.getElementById("location").value;
+
+  const res = await fetch(`/donors?bloodGroup=${bloodGroup}&location=${location}`);
+  const data = await res.json();
+
+  const results = document.getElementById("results");
+  results.innerHTML = "";
+
+  data.forEach(d => {
+    const li = document.createElement("li");
+    li.textContent = `${d.name} - ${d.blood_group} - ${d.location}`;
+    results.appendChild(li);
+  });
+});
+</script>
+
+</body>
+</html>
