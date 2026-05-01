@@ -2,7 +2,7 @@
 
 > 🚑 **Reducing critical response time by intelligently connecting patients with the right blood donors.**
 
-![Blood Donation](https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif)
+![Blood Donation](./assets/Lf.png)
 
 ---
 
@@ -46,7 +46,7 @@ The system uses **backend-driven filtering and optimized database queries** to i
 
 ## 🔄 System Workflow
 
-![Workflow](https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif)
+![Workflow](./assets/LIFELINK.png)
 
 1️⃣ User inputs **blood group & location**  
 2️⃣ Backend applies **filtering & matching logic**  
